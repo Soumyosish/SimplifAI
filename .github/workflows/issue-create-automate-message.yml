@@ -27,8 +27,10 @@ jobs:
 
   assign:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Auto Assign Issue
         uses: pozil/auto-assign-issue@v1
         with:
-          assignee: ${{ github.actor }}
+          assignees: ${{ github.actor }}
